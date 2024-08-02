@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"
+    <title>Assignment Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./scerrenshot/back.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(50% - 10px);
+            height: 500px;
+            min-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        
+
+        .card-buttons {
+        margin-top: auto;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+
+        .btn:hover::after {
+            animation: ripple 1s ease-out;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(40, 40);
+                opacity: 0;
+            }
+        }
+
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .card {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @media (max-width: 768px) {
+        .card {
+            max-width: 100%;
+            min-height: 300px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            min-height: 250px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container" style="display: flex; flex-direction: column; gap: 20px;">
+        <div data-aos="fade-up" style="background-image:url(./scerrenshot/periodic\ table.png) ;" class="card">
+            <h2>Periodic Table</h2>
+            <div class="card-buttons">
+                <a href="https://github.com/Zainzulfee/Preidic-table"><i class="fa-brands fa-github"></i>
+                    <input type="button" class="btn" value="View Code"></a>
+                <a href=" https://zainzulfee.github.io/Preidic-table/"><input type="button" class="btn" value="View Assignment"></a>
+            </div>
+        </div>
+        <div data-aos="zoom-in" style="background-image: url(./scerrenshot/apple.png);" class="card">
+            <h2>Apple-Clone</h2>
+            <div class="card-buttons"><i class="fa-brands fa-github"></i>
+                <a href="https://github.com/Zainzulfee/Apple-clone"><input type="button" class="btn" value="View Code"></a>
+                <a href="https://zainzulfee.github.io/Apple-clone/"><input type="button" class="btn" value="View Assignment"></a>
+            </div>
+        </div>
+        <div data-aos="zoom-in" style="background-image:url(./scerrenshot/flat\ ui.png);" class="card">
+            <h2>Flat Ui Color</h2>
+            <div class="card-buttons"><i class="fa-brands fa-github"></i>
+                <a href="https://github.com/Zainzulfee/Flat-Ui"><input type="button" class="btn" value="View Code"></a>
+                <a href=" https://zainzulfee.github.io/Flat-Ui/"><input type="button" class="btn" value="View Assignment"></a>
+            </div>
+        </div>
+        <div data-aos="zoom-in" style="background-image: url(./scerrenshot/abc=.png); background-size: 650px 470px;" class="card">
+                <h2>ABC Book</h2>
+                <div class="card-buttons"><i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/Zainzulfee/ABC"><input type="button" class="btn" value="View Code"></a>
+                    <a href="https://zainzulfee.github.io/ABC/"><input type="button" class="btn" value="View Assignment"></a>
+                </div>
+        </div>
+        <div data-aos="zoom-in" style="background-image: url(./scerrenshot/sun.png); background: size 500px; ;" class="card">
+                    <h2>ColorLib</h2>
+                    <div class="card-buttons"><i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/Zainzulfee/colorlib"><input type="button" class="btn" value="View Code"></a>
+                        <a href="https://zainzulfee.github.io/colorlib/"><input type="button" class="btn" value="View Assignment"></a>
+                    </div>
+        </div>
+        <div data-aos="zoom-in" style="background-image: url(./scerrenshot/flex.png); background-size: 600px 470px ;" class="card">
+                        <h2>Flex-froggy</h2>
+                        <div class="card-buttons"><i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/Zainzulfee/flex-froggy"><input type="button" class="btn" value="View Code"></a>
+                            <a href="https://zainzulfee.github.io/flex-froggy/"><input type="button" class="btn" value="View Assignment"></a>
+                        </div>
+        </div>
+        <div data-aos="zoom-in" style="background-image: url(./scerrenshot/fb.png); background-size: 500px;" class="card">
+            <h2>FB-Login Page</h2>
+            <div class="card-buttons"><i class="fa-brands fa-github"></i>
+                <a href="https://github.com/Zainzulfee/FB-login-page"><input type="button" class="btn" value="View Code"></a>
+                <a href="https://zainzulfee.github.io/FB-login-page/"><input type="button" class="btn" value="View Assignment"></a>
+            </div>
+</div>
+    </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>
+    AOS.init();
+  </script>
+</html>
